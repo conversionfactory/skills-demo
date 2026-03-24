@@ -20,12 +20,6 @@ export function Header() {
           <Link href="/templates" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
             Templates
           </Link>
-          <Link href="/ad-creative" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-            Ad Creative
-          </Link>
-          <Link href="/programmatic-seo" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-            Programmatic SEO
-          </Link>
         </nav>
 
         <div className="flex items-center gap-3">
