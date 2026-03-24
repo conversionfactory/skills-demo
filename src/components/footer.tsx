@@ -4,14 +4,14 @@ export function Footer() {
   return (
     <footer className="border-t border-border/50 mt-20">
       <div className="container mx-auto px-6 py-16">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
           <div className="col-span-2">
             <Link href="/" className="flex items-center gap-1 mb-4">
               <span className="font-display text-lg italic text-primary">Form</span>
               <span className="text-lg font-semibold tracking-tight">Craft</span>
             </Link>
             <p className="text-sm text-muted-foreground max-w-xs leading-relaxed">
-              Forms that feel effortless. Built for freelancers, agencies, and small teams who care about craft.
+              A next-generation form solution for modern businesses and organizations of all sizes.
             </p>
           </div>
           <div>
@@ -20,14 +20,6 @@ export function Footer() {
               <li><Link href="/#features" className="hover:text-foreground transition-colors">Features</Link></li>
               <li><Link href="/pricing" className="hover:text-foreground transition-colors">Pricing</Link></li>
               <li><Link href="/templates" className="hover:text-foreground transition-colors">Templates</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-sm font-medium mb-4">Marketing Skills</h3>
-            <ul className="space-y-3 text-sm text-muted-foreground">
-              <li><Link href="/email-sequence" className="hover:text-foreground transition-colors">Email Sequence</Link></li>
-              <li><Link href="/ad-creative" className="hover:text-foreground transition-colors">Ad Creative</Link></li>
-              <li><Link href="/programmatic-seo" className="hover:text-foreground transition-colors">Programmatic SEO</Link></li>
             </ul>
           </div>
           <div>
