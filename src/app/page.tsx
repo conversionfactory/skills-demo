@@ -1,59 +1,50 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 
 const features = [
   {
-    title: "Drag and Drop Builder",
-    description:
-      "Our form builder has a drag and drop interface that makes it easy to create forms. You can add fields, rearrange them, and customize the look.",
+    title: "Form Builder",
+    description: "Build forms using our form builder tool. You can add different types of fields and customize how they look.",
   },
   {
     title: "Conditional Logic",
-    description:
-      "Add conditional logic to your forms so that fields show or hide based on previous answers. This helps make forms shorter and more relevant.",
+    description: "Add conditional logic to your forms. Fields can show or hide based on what users enter in other fields.",
   },
   {
     title: "Integrations",
-    description:
-      "Connect your forms to other tools you use like Slack, Google Sheets, Salesforce, HubSpot, and more. We have over 100 integrations available.",
+    description: "Connect your forms to other software. We support connections to various third-party tools and services.",
+  },
+  {
+    title: "Payment Collection",
+    description: "Collect payments through your forms. We have payment processing functionality built into the platform.",
+  },
+  {
+    title: "Branding Options",
+    description: "Customize the look of your forms. You can change colors and add your logo to match your brand.",
   },
   {
     title: "Analytics",
-    description:
-      "See how your forms are performing with our built-in analytics. Track submissions, completion rates, and drop-off points.",
-  },
-  {
-    title: "File Uploads",
-    description:
-      "Allow respondents to upload files through your forms. We support images, documents, PDFs, and more with up to 10GB of storage.",
-  },
-  {
-    title: "Team Collaboration",
-    description:
-      "Work together with your team on forms. Share forms, assign permissions, and collaborate in real-time with team members.",
+    description: "See data about your forms. Track things like how many people submitted and other useful metrics.",
   },
 ];
 
 const testimonials = [
   {
-    quote:
-      "FormFlow has been really helpful for our team. We use it for everything from customer surveys to internal requests.",
+    quote: "FormCraft has been useful for our team. We use it to collect information from people.",
     name: "Sarah Johnson",
     role: "Marketing Manager",
     company: "TechCorp",
   },
   {
-    quote:
-      "We switched from our old form tool to FormFlow and it has been a good experience. The forms look nice and are easy to set up.",
+    quote: "We tried other form tools before and FormCraft works well for us. The forms are easy to make.",
     name: "Mike Chen",
-    role: "Product Lead",
-    company: "StartupXYZ",
+    role: "Agency Owner",
+    company: "Studio XYZ",
   },
   {
-    quote:
-      "The integrations are really useful. We can connect our forms directly to Salesforce which saves us a lot of time.",
+    quote: "It does what we need it to do. We have been using it for a few months now.",
     name: "Lisa Park",
-    role: "Operations Director",
+    role: "Operations Lead",
     company: "GrowthCo",
   },
 ];
@@ -61,89 +52,64 @@ const testimonials = [
 export default function Home() {
   return (
     <>
-      {/* Hero */}
-      <section className="py-20 md:py-32">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight max-w-3xl mx-auto">
-            Build forms for your business
+      <section className="relative hero-grid overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="relative container mx-auto px-6 py-32 md:py-44 text-center">
+          <h1 className="font-display text-6xl md:text-8xl italic leading-[0.9] tracking-tight text-foreground mb-8">
+            Online Form Builder<br />
+            <span className="text-primary">for Businesses</span>
           </h1>
-          <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
-            FormFlow is an online form builder that helps you create forms,
-            surveys, and quizzes. Collect responses and manage your data all in
-            one place.
+          <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto mb-10 leading-relaxed">
+            FormCraft is a platform that allows you to create forms and collect information from your customers and website visitors.
           </p>
-          <div className="mt-8 flex gap-3 justify-center">
-            <Button size="lg">Get started for free</Button>
-            <Button size="lg" variant="outline">
-              See a demo
-            </Button>
+          <div className="flex gap-3 justify-center flex-wrap">
+            <Button size="lg" className="glow-amber text-base px-8">Sign Up</Button>
+            <Button size="lg" variant="outline" className="text-base px-8 border-border/60">Learn More</Button>
           </div>
-          <p className="mt-4 text-sm text-muted-foreground">
-            Free plan available. No credit card required.
-          </p>
+          <p className="mt-5 text-xs text-muted-foreground">Free plan available. No credit card required.</p>
         </div>
       </section>
 
-      {/* Social proof */}
-      <section className="py-12 border-y bg-muted/30">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-sm text-muted-foreground mb-6">
-            Used by over 10,000 businesses
-          </p>
-          <div className="flex justify-center gap-8 md:gap-16 items-center opacity-40">
-            <span className="text-lg font-semibold">Acme Inc</span>
-            <span className="text-lg font-semibold">Globex</span>
-            <span className="text-lg font-semibold">Initech</span>
-            <span className="text-lg font-semibold">Umbrella</span>
-            <span className="text-lg font-semibold hidden md:block">
-              Wayne Enterprises
-            </span>
-          </div>
-        </div>
-      </section>
-
-      {/* Features */}
-      <section id="features" className="py-20">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-4">Features</h2>
-          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Everything you need to build and manage forms for your business.
-          </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {features.map((feature) => (
-              <Card key={feature.title}>
-                <CardHeader>
-                  <CardTitle className="text-lg">{feature.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground">
-                    {feature.description}
-                  </p>
-                </CardContent>
-              </Card>
+      <section className="border-y border-border/50 py-8">
+        <div className="container mx-auto px-6">
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+            <p className="text-xs text-muted-foreground uppercase tracking-widest">Used by businesses</p>
+            {["Acme Inc", "Globex", "Initech", "Umbrella Corp", "Wayne Enterprises"].map((co) => (
+              <span key={co} className="text-sm font-medium text-muted-foreground/40">{co}</span>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            What our customers say
-          </h2>
+      <section id="features" className="py-28">
+        <div className="container mx-auto px-6">
+          <div className="max-w-2xl mb-16">
+            <h2 className="font-display text-5xl italic leading-tight mb-4">Features</h2>
+            <p className="text-muted-foreground text-lg">Here are some of the things you can do with FormCraft.</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border/50 rounded-xl overflow-hidden border border-border/50">
+            {features.map((feature) => (
+              <div key={feature.title} className="bg-card p-8 hover:bg-accent/30 transition-colors">
+                <h3 className="font-semibold text-base mb-2">{feature.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-28 border-t border-border/50">
+        <div className="container mx-auto px-6">
+          <h2 className="font-display text-5xl italic text-center mb-16">Customer Testimonials</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {testimonials.map((t) => (
-              <Card key={t.name}>
-                <CardContent className="pt-6">
-                  <p className="text-sm text-muted-foreground mb-4">
-                    &ldquo;{t.quote}&rdquo;
-                  </p>
-                  <div>
-                    <p className="font-semibold text-sm">{t.name}</p>
-                    <p className="text-xs text-muted-foreground">
-                      {t.role}, {t.company}
-                    </p>
+              <Card key={t.name} className="bg-card border-border/50">
+                <CardContent className="pt-6 pb-6">
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-6">&ldquo;{t.quote}&rdquo;</p>
+                  <div className="border-t border-border/50 pt-4">
+                    <p className="font-medium text-sm">{t.name}</p>
+                    <p className="text-xs text-muted-foreground mt-0.5">{t.role} · {t.company}</p>
                   </div>
                 </CardContent>
               </Card>
@@ -152,15 +118,16 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to get started?</h2>
-          <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-            Sign up today and start building forms in minutes. No credit card
-            required to get started.
+      <section className="py-28 border-t border-border/50">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="font-display text-6xl italic mb-6">Get Started</h2>
+          <p className="text-muted-foreground mb-10 max-w-md mx-auto text-lg">
+            Sign up for FormCraft today and start creating forms for your business.
           </p>
-          <Button size="lg">Start building forms</Button>
+          <div className="flex gap-3 justify-center">
+            <Button size="lg" className="glow-amber text-base px-8">Create an Account</Button>
+            <Button size="lg" variant="outline" className="text-base px-8 border-border/60">View Pricing</Button>
+          </div>
         </div>
       </section>
     </>
