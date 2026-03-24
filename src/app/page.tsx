@@ -72,12 +72,6 @@ const skills = [
     description: "Google, Meta & LinkedIn ads via Gemini",
     tag: "Built with /ad-creative",
   },
-  {
-    href: "/programmatic-seo",
-    label: "Programmatic SEO",
-    description: "12 pages · 87,300 monthly searches",
-    tag: "Built with /programmatic-seo",
-  },
 ];
 
 export default function Home() {

@@ -27,8 +27,7 @@ export function Footer() {
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li><Link href="/email-sequence" className="hover:text-foreground transition-colors">Email Sequence</Link></li>
               <li><Link href="/ad-creative" className="hover:text-foreground transition-colors">Ad Creative</Link></li>
-              <li><Link href="/programmatic-seo" className="hover:text-foreground transition-colors">Programmatic SEO</Link></li>
-            </ul>
+                          </ul>
           </div>
           <div>
             <h3 className="text-sm font-medium mb-4">Company</h3>
