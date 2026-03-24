@@ -20,6 +20,9 @@ export function Header() {
           <Link href="/templates" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
             Templates
           </Link>
+          <Link href="/email-sequence" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            Email Sequence
+          </Link>
           <Link href="/ad-creative" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
             Ad Creative
           </Link>
