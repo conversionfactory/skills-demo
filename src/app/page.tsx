@@ -61,12 +61,6 @@ const testimonials = [
 
 const skills = [
   {
-    href: "/email-sequence",
-    label: "Email Sequence",
-    description: "7-email activation flow — free to Pro",
-    tag: "Built with /email-sequence",
-  },
-  {
     href: "/ad-creative",
     label: "Ad Creative",
     description: "Google, Meta & LinkedIn ads via Gemini",
