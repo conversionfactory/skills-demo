@@ -24,8 +24,8 @@ const dmMono = DM_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "FormCraft — Forms that feel effortless",
-  description: "Build beautiful forms with built-in payments, conditional logic, and white-label branding. Made for freelancers and agencies.",
+  title: "FormCraft",
+  description: "FormCraft is a form builder.",
 };
 
 export default function RootLayout({
