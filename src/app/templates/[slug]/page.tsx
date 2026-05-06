@@ -56,6 +56,13 @@ export default async function TemplateSlugPage({
           </div>
         </div>
 
+        {/* Unique intro — different per page */}
+        <div className="mb-10 prose prose-neutral max-w-none">
+          <p className="text-base leading-relaxed text-foreground/90">
+            {page.intro}
+          </p>
+        </div>
+
         {/* Mock form preview */}
         <Card className="mb-12 border-2">
           <CardHeader className="border-b bg-muted/30">
