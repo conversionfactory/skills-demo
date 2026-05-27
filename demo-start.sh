@@ -9,6 +9,7 @@ DEMOS=(
   "seo-audit:3031"
   "programmatic-seo:3032"
   "email-sequence:3033"
+  "segmetrics:3034"
 )
 
 echo "🚀 Setting up demo worktrees..."
@@ -55,5 +56,6 @@ echo "  Copywriting       → http://localhost:3030"
 echo "  SEO Audit         → http://localhost:3031"
 echo "  Programmatic SEO  → http://localhost:3032"
 echo "  Email Sequence    → http://localhost:3033"
+echo "  SegMetrics        → http://localhost:3034"
 echo ""
-echo "To stop all servers: kill \$(lsof -ti :3030,:3031,:3032,:3033)"
+echo "To stop all servers: kill \$(lsof -ti :3030,:3031,:3032,:3033,:3034)"
