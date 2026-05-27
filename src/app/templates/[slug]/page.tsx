@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { getTemplatePage, templatePages } from "@/lib/template-pages";
+import { getTemplatePage, templatePages, type TemplatePage } from "@/lib/template-pages";
 
 export async function generateStaticParams() {
   return templatePages.map((p) => ({ slug: p.slug }));
@@ -47,8 +47,11 @@ export default async function TemplateSlugPage({
         <div className="mb-12">
           <Badge variant="secondary" className="mb-3">{page.category}</Badge>
           <h1 className="text-4xl font-bold mb-4">{page.h1}</h1>
-          <p className="text-lg text-muted-foreground mb-6 max-w-2xl">
+          <p className="text-lg text-muted-foreground mb-4 max-w-2xl">
             {page.metaDescription}
+          </p>
+          <p className="text-base text-muted-foreground mb-6 max-w-2xl">
+            {page.intro}
           </p>
           <div className="flex gap-3">
             <Button size="lg">Use this template free</Button>
@@ -137,6 +140,39 @@ export default async function TemplateSlugPage({
             ))}
           </div>
         </div>
+
+        {/* Related templates */}
+        {page.relatedSlugs.length > 0 && (
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold mb-6">Related templates</h2>
+            <div className="grid md:grid-cols-3 gap-4">
+              {page.relatedSlugs
+                .map((s) => templatePages.find((t) => t.slug === s))
+                .filter((t): t is TemplatePage => Boolean(t))
+                .map((related) => (
+                  <Link
+                    key={related.slug}
+                    href={`/templates/${related.slug}`}
+                    className="group"
+                  >
+                    <Card className="h-full transition-colors group-hover:border-primary/60">
+                      <CardContent className="pt-5">
+                        <Badge variant="secondary" className="mb-2 text-xs">
+                          {related.category}
+                        </Badge>
+                        <p className="font-semibold text-sm mb-1 group-hover:text-primary">
+                          {related.h1}
+                        </p>
+                        <p className="text-xs text-muted-foreground line-clamp-2">
+                          {related.metaDescription}
+                        </p>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                ))}
+            </div>
+          </div>
+        )}
 
         {/* CTA */}
         <Card className="bg-primary text-primary-foreground border-0">
