@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "bash ~/.claude/scripts/dev-doctor.sh --warn",
     "dev": "next dev -p 3023",
+    "doctor": "bash ~/.claude/scripts/dev-doctor.sh",
+    "doctor:fix": "bash ~/.claude/scripts/dev-doctor.sh --fix",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
